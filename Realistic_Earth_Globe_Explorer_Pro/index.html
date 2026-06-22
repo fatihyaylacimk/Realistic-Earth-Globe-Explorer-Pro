@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realistic Earth Globe Explorer Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="earthCanvas"></canvas>
+
+  <header class="topbar">
+    <div class="brand">
+      <span></span>
+      <div>
+        <small>REALISTIC EARTH DATA INTERFACE</small>
+        <strong>Earth Globe Explorer Pro</strong>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="zoomOut">−</button>
+      <button id="resetView">Reset</button>
+      <button id="zoomIn">+</button>
+    </div>
+  </header>
+
+  <aside class="left-panel">
+    <p class="eyebrow">INTERACTIVE WORLD MAP</p>
+    <h1>Explore Earth by country and city.</h1>
+    <p>
+      Drag the globe to rotate. Scroll to zoom. Click a country label or city marker to open information.
+    </p>
+
+    <div class="stats">
+      <div>
+        <strong id="zoomText">1.00x</strong>
+        <span>Zoom</span>
+      </div>
+      <div>
+        <strong id="visibleText">0</strong>
+        <span>Visible Cities</span>
+      </div>
+      <div>
+        <strong id="modeText">Earth</strong>
+        <span>Mode</span>
+      </div>
+    </div>
+
+    <div class="hint-box">
+      <strong>Controls</strong>
+      <p><b>Drag:</b> Rotate globe</p>
+      <p><b>Scroll:</b> Zoom in / out</p>
+      <p><b>Click:</b> Country or city details</p>
+    </div>
+  </aside>
+
+  <aside class="info-panel" id="infoPanel">
+    <div class="info-head">
+      <span id="infoType">SELECTED</span>
+      <button id="closeInfo">×</button>
+    </div>
+    <h2 id="infoTitle">Earth</h2>
+    <p id="infoDescription">
+      Click on a country label or city marker to display information.
+    </p>
+
+    <div class="info-grid" id="infoGrid">
+      <div><span>Type</span><strong>Planet</strong></div>
+      <div><span>Surface</span><strong>Ocean / Land</strong></div>
+      <div><span>Interaction</span><strong>Drag + Zoom</strong></div>
+      <div><span>Layer</span><strong>Countries / Cities</strong></div>
+    </div>
+  </aside>
+
+  <aside class="city-panel">
+    <h2>Visible Locations</h2>
+    <div id="locationList"></div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
